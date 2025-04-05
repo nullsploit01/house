@@ -62,7 +62,6 @@ const CanvasWrapper = () => {
           aspect: window.innerWidth / window.innerHeight,
         }}
       >
-        <axesHelper args={[20]} />
         <group>
           // garage
           <mesh position={[-5, 2.65, 0.2]}>
@@ -73,13 +72,26 @@ const CanvasWrapper = () => {
             <boxGeometry args={[5, 2.8, 3]} />
             <meshNormalMaterial />
           </mesh>
-          // entrance
+          // hall
           <mesh position={[0, 2.5, -3]}>
             <TriangleGeometry height={2.5} width={15} depth={3.4} />
             <meshNormalMaterial side={DoubleSide} />
           </mesh>
           <mesh position={[0, 1.25, -3]}>
             <boxGeometry args={[15, 2.5, 3]} />
+            <meshNormalMaterial />
+          </mesh>
+          // entrance
+          <mesh position={[0.7, 2, -0.5]}>
+            <boxGeometry args={[0.7, 4, 2]} />
+            <meshNormalMaterial />
+          </mesh>
+          <mesh position={[-2.9, 2, -0.5]}>
+            <boxGeometry args={[0.7, 5.1, 2]} />
+            <meshNormalMaterial />
+          </mesh>
+          <mesh position={[-0.95, 4.2, -0.5]} rotation-y={Math.PI * 0.5}>
+            <boxGeometry args={[2, 0.7, 4]} />
             <meshNormalMaterial />
           </mesh>
           // room
@@ -93,7 +105,7 @@ const CanvasWrapper = () => {
           </mesh>
           // floor
           <mesh rotation-x={-Math.PI * 0.5}>
-            <planeGeometry args={[20, 20, 50, 50]} />
+            <planeGeometry args={[50, 50, 50, 50]} />
             <meshNormalMaterial />
           </mesh>
         </group>
