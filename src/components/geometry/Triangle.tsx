@@ -5,7 +5,6 @@ export default function TriangleGeometry({
   width = 2, // width of base (X)
   height = 1, // height of triangle (Y)
   depth = 3, // depth of roof (Z)
-  color = "brown",
   position = [0, 0, 0],
 }: {
   width?: number;

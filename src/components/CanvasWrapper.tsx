@@ -82,18 +82,16 @@ const CanvasWrapper = () => {
             <meshNormalMaterial />
           </mesh>
           // entrance
-          <mesh position={[0.7, 2, -0.5]}>
-            <boxGeometry args={[0.7, 4, 2]} />
-            <meshNormalMaterial />
-          </mesh>
-          <mesh position={[-2.9, 2, -0.5]}>
-            <boxGeometry args={[0.7, 5.1, 2]} />
-            <meshNormalMaterial />
-          </mesh>
-          <mesh position={[-0.95, 4.2, -0.5]} rotation-y={Math.PI * 0.5}>
-            <boxGeometry args={[2, 0.7, 4]} />
-            <meshNormalMaterial />
-          </mesh>
+          <group>
+            <mesh>
+              <boxGeometry args={[1, 5, 1]} />
+              <meshNormalMaterial />
+            </mesh>
+            <mesh position={[-3, 0, 0]}>
+              <boxGeometry args={[1, 7, 1]} />
+              <meshNormalMaterial />
+            </mesh>
+          </group>
           // room
           <mesh position={[5, 3, 0.2]}>
             <TriangleGeometry height={1.2} width={5.3} depth={3.4} />
