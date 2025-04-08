@@ -65,6 +65,8 @@ const CanvasWrapper = () => {
           aspect: window.innerWidth / window.innerHeight,
         }}
       >
+        <ambientLight intensity={0.275} />
+        <directionalLight position={[3, 7, 0]} intensity={1} />
         <group>
           // garage
           <Garage />
