@@ -99,6 +99,9 @@ const CanvasWrapper = () => {
               <boxGeometry args={[1.5, 0.4, 2]} />
               <meshBasicMaterial color="black" />
             </mesh>
+            <mesh position={[-1.5, 3.5, -0.75]}>
+              <TriangleGeometry depth={1.5} width={4.5} />
+            </mesh>
           </group>
           // room
           <mesh position={[5, 3, 0.2]}>
