@@ -6,12 +6,14 @@ export default function TriangleGeometry({
   height = 1, // height of triangle (Y)
   depth = 3, // depth of roof (Z)
   position = [0, 0, 0],
+  children,
 }: {
   width?: number;
   height?: number;
   depth?: number;
   color?: string;
   position?: [number, number, number];
+  children?: React.ReactNode;
 }) {
   const geometry = useMemo(() => {
     const geom = new THREE.BufferGeometry();
@@ -65,7 +67,7 @@ export default function TriangleGeometry({
 
   return (
     <mesh geometry={geometry} position={position}>
-      <meshNormalMaterial />
+      {children ? children : <meshNormalMaterial />}
     </mesh>
   );
 }

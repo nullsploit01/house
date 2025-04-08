@@ -1,4 +1,4 @@
-import TriangleGeometry from "./geometry/Triangle";
+import Roof from "./Roof";
 
 const Entrance = () => {
   return (
@@ -20,7 +20,7 @@ const Entrance = () => {
         <meshBasicMaterial color="black" />
       </mesh>
       <mesh position={[-1.5, 3.5, -0.75]}>
-        <TriangleGeometry depth={1.5} width={4.5} />
+        <Roof depth={1.5} width={4.5} />
       </mesh>
     </group>
   );
