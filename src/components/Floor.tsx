@@ -9,6 +9,7 @@ const Floor = () => {
     'textures/floor/leafy_grass_1k/leafy_grass_diff_1k.png',
   );
 
+  floorColorTexture.repeat.set(10, 10);
   floorColorTexture.wrapS = RepeatWrapping;
   floorColorTexture.wrapT = RepeatWrapping;
   floorColorTexture.colorSpace = SRGBColorSpace;
@@ -18,7 +19,6 @@ const Floor = () => {
     'textures/floor/leafy_grass_1k/leafy_grass_arm_1k.png',
   );
 
-  floorARMTexture.repeat.set(8, 8);
   floorARMTexture.wrapS = RepeatWrapping;
   floorARMTexture.wrapT = RepeatWrapping;
 
