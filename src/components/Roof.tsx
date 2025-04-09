@@ -1,11 +1,6 @@
-import {
-  DoubleSide,
-  RepeatWrapping,
-  SRGBColorSpace,
-  TextureLoader,
-} from "three";
-import TriangleGeometry from "./geometry/Triangle";
-import { useLoader } from "@react-three/fiber";
+import TriangleGeometry from './geometry/Triangle';
+import { useLoader } from '@react-three/fiber';
+import { DoubleSide, RepeatWrapping, SRGBColorSpace, TextureLoader } from 'three';
 
 const Roof = ({
   width = 2, // width of base (X)
@@ -21,7 +16,7 @@ const Roof = ({
 }) => {
   const roofColorTexture = useLoader(
     TextureLoader,
-    "textures/roof/ceramic_roof_01_1k/ceramic_roof_01_diff_1k.png"
+    'textures/roof/ceramic_roof_01_1k/ceramic_roof_01_diff_1k.png',
   );
 
   roofColorTexture.colorSpace = SRGBColorSpace;
@@ -31,7 +26,7 @@ const Roof = ({
 
   const roofARMTexture = useLoader(
     TextureLoader,
-    "textures/roof/ceramic_roof_01_1k/ceramic_roof_01_arm_1k.png"
+    'textures/roof/ceramic_roof_01_1k/ceramic_roof_01_arm_1k.png',
   );
 
   roofARMTexture.repeat.set(3, 1);
@@ -40,7 +35,7 @@ const Roof = ({
 
   const roofNormalTexture = useLoader(
     TextureLoader,
-    "textures/roof/ceramic_roof_01_1k/ceramic_roof_01_nor_gl_1k.png"
+    'textures/roof/ceramic_roof_01_1k/ceramic_roof_01_nor_gl_1k.png',
   );
 
   roofNormalTexture.repeat.set(3, 1);
@@ -49,7 +44,7 @@ const Roof = ({
 
   const roofDisplacementTexture = useLoader(
     TextureLoader,
-    "textures/roof/ceramic_roof_01_1k/ceramic_roof_01_disp_1k.png"
+    'textures/roof/ceramic_roof_01_1k/ceramic_roof_01_disp_1k.png',
   );
 
   roofDisplacementTexture.repeat.set(3, 1);
@@ -57,12 +52,7 @@ const Roof = ({
   roofDisplacementTexture.wrapT = RepeatWrapping;
 
   return (
-    <TriangleGeometry
-      height={height}
-      width={width}
-      depth={depth}
-      position={position}
-    >
+    <TriangleGeometry height={height} width={width} depth={depth} position={position}>
       <meshStandardMaterial
         side={DoubleSide}
         map={roofColorTexture}

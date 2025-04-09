@@ -1,11 +1,11 @@
-import { OrbitControls } from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
-import { useEffect, useRef } from "react";
-import Floor from "./Floor";
-import Garage from "./Garage";
-import Hall from "./Hall";
-import Entrance from "./Entrance";
-import Room from "./Room";
+import Entrance from './Entrance';
+import Floor from './Floor';
+import Garage from './Garage';
+import Hall from './Hall';
+import Room from './Room';
+import { OrbitControls } from '@react-three/drei';
+import { Canvas } from '@react-three/fiber';
+import { useEffect, useRef } from 'react';
 
 const CanvasWrapper = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -19,28 +19,26 @@ const CanvasWrapper = () => {
         document.fullscreenElement || (document as any).webkitFullscreenElement;
 
       if (!fullscreenElement) {
-        container.requestFullscreen?.() ||
-          (container as any).webkitRequestFullscreen?.();
+        container.requestFullscreen?.() || (container as any).webkitRequestFullscreen?.();
       } else {
-        document.exitFullscreen?.() ||
-          (document as any).webkitExitFullscreen?.();
+        document.exitFullscreen?.() || (document as any).webkitExitFullscreen?.();
       }
     };
 
     const resizeCanvas = () => {
       setTimeout(() => {
-        window.dispatchEvent(new Event("resize"));
+        window.dispatchEvent(new Event('resize'));
       }, 100);
     };
 
-    window.addEventListener("dblclick", handleDblClick);
-    document.addEventListener("fullscreenchange", resizeCanvas);
-    document.addEventListener("webkitfullscreenchange", resizeCanvas);
+    window.addEventListener('dblclick', handleDblClick);
+    document.addEventListener('fullscreenchange', resizeCanvas);
+    document.addEventListener('webkitfullscreenchange', resizeCanvas);
 
     return () => {
-      window.removeEventListener("dblclick", handleDblClick);
-      document.removeEventListener("fullscreenchange", resizeCanvas);
-      document.removeEventListener("webkitfullscreenchange", resizeCanvas);
+      window.removeEventListener('dblclick', handleDblClick);
+      document.removeEventListener('fullscreenchange', resizeCanvas);
+      document.removeEventListener('webkitfullscreenchange', resizeCanvas);
     };
   }, []);
 
@@ -48,13 +46,13 @@ const CanvasWrapper = () => {
     <div
       ref={containerRef}
       style={{
-        width: "100vw",
-        height: "100vh",
-        overflow: "hidden",
+        width: '100vw',
+        height: '100vh',
+        overflow: 'hidden',
       }}
     >
       <Canvas
-        style={{ width: "100%", height: "100%" }}
+        style={{ width: '100%', height: '100%' }}
         dpr={Math.min(window.devicePixelRatio, 2)}
         className="webgl"
         camera={{

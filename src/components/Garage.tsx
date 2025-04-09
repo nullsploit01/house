@@ -1,11 +1,11 @@
-import { RepeatWrapping, SRGBColorSpace, TextureLoader } from "three";
-import Roof from "./Roof";
-import { useLoader } from "@react-three/fiber";
+import Roof from './Roof';
+import { useLoader } from '@react-three/fiber';
+import { RepeatWrapping, SRGBColorSpace, TextureLoader } from 'three';
 
 const Garage = () => {
   const wallColorTexture = useLoader(
     TextureLoader,
-    "textures/wall/painted_plaster_wall_1k/painted_plaster_wall_arm_1k.png"
+    'textures/wall/painted_plaster_wall_1k/painted_plaster_wall_arm_1k.png',
   );
 
   wallColorTexture.wrapS = RepeatWrapping;
@@ -14,7 +14,7 @@ const Garage = () => {
 
   const wallARMTexture = useLoader(
     TextureLoader,
-    "textures/wall/painted_plaster_wall_1k/painted_plaster_wall_arm_1k.png"
+    'textures/wall/painted_plaster_wall_1k/painted_plaster_wall_arm_1k.png',
   );
 
   wallARMTexture.wrapS = RepeatWrapping;
@@ -23,7 +23,7 @@ const Garage = () => {
 
   const wallNormalTexture = useLoader(
     TextureLoader,
-    "textures/wall/painted_plaster_wall_1k/painted_plaster_wall_nor_gl_1k.png"
+    'textures/wall/painted_plaster_wall_1k/painted_plaster_wall_nor_gl_1k.png',
   );
 
   wallNormalTexture.wrapS = RepeatWrapping;

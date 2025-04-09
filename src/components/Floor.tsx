@@ -1,15 +1,12 @@
-import { useLoader } from "@react-three/fiber";
-import { RepeatWrapping, SRGBColorSpace, TextureLoader } from "three";
+import { useLoader } from '@react-three/fiber';
+import { RepeatWrapping, SRGBColorSpace, TextureLoader } from 'three';
 
 const Floor = () => {
-  const floorAlphaTexture = useLoader(
-    TextureLoader,
-    "textures/floor/alpha.webp"
-  );
+  const floorAlphaTexture = useLoader(TextureLoader, 'textures/floor/alpha.webp');
 
   const floorColorTexture = useLoader(
     TextureLoader,
-    "textures/floor/leafy_grass_1k/leafy_grass_diff_1k.png"
+    'textures/floor/leafy_grass_1k/leafy_grass_diff_1k.png',
   );
 
   floorColorTexture.wrapS = RepeatWrapping;
@@ -18,7 +15,7 @@ const Floor = () => {
 
   const floorARMTexture = useLoader(
     TextureLoader,
-    "textures/floor/leafy_grass_1k/leafy_grass_arm_1k.png"
+    'textures/floor/leafy_grass_1k/leafy_grass_arm_1k.png',
   );
 
   floorARMTexture.repeat.set(8, 8);
@@ -27,7 +24,7 @@ const Floor = () => {
 
   const floorNormalTexture = useLoader(
     TextureLoader,
-    "textures/floor/leafy_grass_1k/leafy_grass_nor_gl_1k.png"
+    'textures/floor/leafy_grass_1k/leafy_grass_nor_gl_1k.png',
   );
 
   floorNormalTexture.repeat.set(8, 8);
@@ -36,7 +33,7 @@ const Floor = () => {
 
   const floorDisplacementMap = useLoader(
     TextureLoader,
-    "textures/floor/leafy_grass_1k/leafy_grass_disp_1k.png"
+    'textures/floor/leafy_grass_1k/leafy_grass_disp_1k.png',
   );
 
   floorDisplacementMap.repeat.set(8, 8);
